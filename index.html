@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    
+  <div class="container">
+     <!--Title and subtitle-->
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1 style="color: rgb(17, 14, 104);">Belly Button Biodiversity Study</h1>
+        <h3 style="color: rgb(17, 14, 104);">Use the interactive charts below to explore the dataset</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+         <!--Dropdown menu-->
+        <div class="well">
+          <h4>Test Subject ID Number:</h4>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+         <!--Demographic table-->
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <!--Bar chart-->
+      <div class="col-md-8">
+        <div id="BarChart"></div>
+      </div>
+    </div>
+    <!--Bubble chart-->
+    <div class="row">
+      <div class="col-md-12">
+        <div id="BubbleChart"></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/app.js"></script>
+
+</body>
+
+</html>
